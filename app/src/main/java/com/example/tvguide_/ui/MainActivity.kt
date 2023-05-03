@@ -1,11 +1,14 @@
-package com.example.tvguide_
+package com.example.tvguide_.ui
 
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.tvguide_.R
+import com.example.tvguide_.ui.modules.showdatils.ui.ShowDetailsFragment
 import com.example.tvguide_.databinding.ActivityMainBinding
-import com.example.tvguide_.model.ShowItem
+import com.example.tvguide_.ui.modules.data.model.ShowItem
+import com.example.tvguide_.ui.modules.schedule.ui.ScheduleFragment
 
 class MainActivity : AppCompatActivity(), IEventReturnMainCallBack {
     private lateinit var binding : ActivityMainBinding

@@ -1,4 +1,4 @@
-package com.example.tvguide_.model.search
+package com.example.tvguide_.ui.modules.data.model.search
 
 data class SearchResponse(
     val score: Double,

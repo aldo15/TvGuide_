@@ -1,21 +1,24 @@
-package com.example.tvguide_
+package com.example.tvguide_.ui.modules.schedule.model
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.tvguide_.model.schedule.ScheduleResponse
-import com.example.tvguide_.model.search.SearchResponse
+import com.example.tvguide_.retrofit.RetrofitInstance
+import com.example.tvguide_.ui.modules.data.model.schedule.ScheduleResponse
+import com.example.tvguide_.ui.modules.data.model.search.SearchResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class SheduleViewModel : ViewModel() {
     private var scheduleLiveData = MutableLiveData<List<ScheduleResponse>>()
     private var searchLiveData = MutableLiveData<List<SearchResponse>>()
 
     fun getSchedule() {
-        RetrofitInstance.api.getSchedule("US", "2023-04-30").enqueue(object :
+        RetrofitInstance.api.getSchedule("US", getCurrentDate()).enqueue(object :
             Callback<List<ScheduleResponse>> {
             override fun onResponse(call: Call<List<ScheduleResponse>>, response: Response<List<ScheduleResponse>>) {
                 if (response.body()!=null){
@@ -46,6 +49,13 @@ class SheduleViewModel : ViewModel() {
                 Log.d("TAG",t.message.toString())
             }
         })
+    }
+
+    fun getCurrentDate(): String{
+        val currentDate = LocalDate.now()
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        val formattedDate = currentDate.format(formatter)
+        return formattedDate.toString()
     }
 
     fun observeScheduleLiveData() : LiveData<List<ScheduleResponse>> {

@@ -1,4 +1,4 @@
-package com.example.tvguide_
+package com.example.tvguide_.retrofit
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

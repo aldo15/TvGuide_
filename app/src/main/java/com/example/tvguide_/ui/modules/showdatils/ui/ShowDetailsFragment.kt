@@ -1,4 +1,4 @@
-package com.example.tvguide_
+package com.example.tvguide_.ui.modules.showdatils.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -11,10 +11,11 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.example.tvguide_.R
+import com.example.tvguide_.ui.modules.showdatils.model.ShowDetailsViewModel
 import com.example.tvguide_.databinding.FragmentShowDetailsBinding
-import com.example.tvguide_.model.ShowItem
+import com.example.tvguide_.ui.modules.data.model.ShowItem
 
 class ShowDetailsFragment(private var showItem: ShowItem) : Fragment() {
     lateinit var binding: FragmentShowDetailsBinding

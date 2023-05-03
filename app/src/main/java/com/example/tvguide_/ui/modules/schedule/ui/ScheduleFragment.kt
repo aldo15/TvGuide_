@@ -1,4 +1,4 @@
-package com.example.tvguide_
+package com.example.tvguide_.ui.modules.schedule.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,11 @@ import android.view.inputmethod.EditorInfo
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.tvguide_.ui.IEventReturnMainCallBack
+import com.example.tvguide_.R
+import com.example.tvguide_.ui.modules.schedule.model.SheduleViewModel
 import com.example.tvguide_.databinding.FragmentScheduleBinding
-import com.example.tvguide_.model.ShowItem
+import com.example.tvguide_.ui.modules.data.model.ShowItem
 
 
 class ScheduleFragment(private var callBack: IEventReturnMainCallBack) : Fragment() {
@@ -70,7 +73,10 @@ class ScheduleFragment(private var callBack: IEventReturnMainCallBack) : Fragmen
 
         binding.etSearch.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                viewModel.getSearch(binding.etSearch.text.toString())
+                if(binding.etSearch.text.toString().isEmpty()){
+                    viewModel.getSchedule()
+                } else
+                    viewModel.getSearch(binding.etSearch.text.toString())
             }
             true
         }

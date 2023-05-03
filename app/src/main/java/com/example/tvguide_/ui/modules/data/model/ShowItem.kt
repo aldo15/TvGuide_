@@ -1,4 +1,4 @@
-package com.example.tvguide_.model
+package com.example.tvguide_.ui.modules.data.model
 
 data class ShowItem(
     val imageUrl: String?,

@@ -1,11 +1,11 @@
-package com.example.tvguide_
+package com.example.tvguide_.retrofit
 
-import com.example.tvguide_.model.cast.CastResponse
-import com.example.tvguide_.model.schedule.ScheduleResponse
-import com.example.tvguide_.model.search.SearchResponse
+import com.example.tvguide_.ShowDetailsResponse
+import com.example.tvguide_.ui.modules.data.model.cast.CastResponse
+import com.example.tvguide_.ui.modules.data.model.schedule.ScheduleResponse
+import com.example.tvguide_.ui.modules.data.model.search.SearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 import retrofit2.http.Url
 

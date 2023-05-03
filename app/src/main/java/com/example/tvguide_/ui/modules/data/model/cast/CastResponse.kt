@@ -1,4 +1,4 @@
-package com.example.tvguide_.model.cast
+package com.example.tvguide_.ui.modules.data.model.cast
 
 data class CastResponse(
     val person: Person,

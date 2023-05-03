@@ -1,11 +1,11 @@
-package com.example.tvguide_
+package com.example.tvguide_.ui.modules.showdatils.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.tvguide_.databinding.ItemTalentsBinding
-import com.example.tvguide_.model.cast.CastResponse
+import com.example.tvguide_.ui.modules.data.model.cast.CastResponse
 
 class CastAdapter : RecyclerView.Adapter<CastAdapter.ViewHolder>() {
     private var itemList = ArrayList<CastResponse>()

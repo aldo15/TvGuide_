@@ -1,11 +1,12 @@
-package com.example.tvguide_
+package com.example.tvguide_.ui.modules.schedule.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.tvguide_.databinding.ItemShowBinding
-import com.example.tvguide_.model.ShowItem
+import com.example.tvguide_.ui.modules.data.model.ShowItem
+import com.example.tvguide_.ui.IEventReturnMainCallBack
 
 class ShowAdapter : RecyclerView.Adapter<ShowAdapter.ViewHolder>() {
     private var itemList = ArrayList<ShowItem>()

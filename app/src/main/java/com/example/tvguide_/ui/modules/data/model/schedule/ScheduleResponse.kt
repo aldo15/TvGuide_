@@ -1,4 +1,4 @@
-package com.example.tvguide_.model.schedule
+package com.example.tvguide_.ui.modules.data.model.schedule
 
 data class ScheduleResponse(
     val id: Int,

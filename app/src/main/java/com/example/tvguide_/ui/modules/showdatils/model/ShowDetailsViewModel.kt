@@ -1,12 +1,12 @@
-package com.example.tvguide_
+package com.example.tvguide_.ui.modules.showdatils.model
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.tvguide_.model.cast.CastResponse
-import com.example.tvguide_.model.schedule.ScheduleResponse
-import com.example.tvguide_.model.search.SearchResponse
+import com.example.tvguide_.ShowDetailsResponse
+import com.example.tvguide_.ui.modules.data.model.cast.CastResponse
+import com.example.tvguide_.retrofit.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
