@@ -45,7 +45,7 @@ data class Show(
     val weight: Int,
     val network: Network?,
     val webChannel: WebChannel?,
-    val dvdCountry: String?,
+    val dvdCountry: Any?,
     val externals: Externals,
     val image: Image?,
     val summary: String?,
